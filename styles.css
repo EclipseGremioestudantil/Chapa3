@@ -1,0 +1,161 @@
+/* Estilo base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #222;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Cores do Grêmio */
+:root {
+  --vermelho: #d32f2f;
+  --verde: #388e3c;
+  --branco: #ffffff;
+}
+
+/* Cabeçalho */
+header {
+  background: var(--vermelho);
+  color: var(--branco);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  background-color: #f8d7da; /* Vermelho claro */
+  color: #b71c1c;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 10px 0 0;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Container com fundo verde */
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #e0f2e0; /* Verde claro */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 100, 0, 0.2);
+}
+
+/* Seções */
+section {
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+h2 {
+  color: var(--verde);
+  margin-bottom: 15px;
+}
+
+/* Rodapé */
+footer {
+  background: var(--verde);
+  color: var(--branco);
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+.botao-propostas {
+  display: inline-block;
+  background-color: var(--verde);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  transform: scale(1); /* Tamanho original */
+}
+
+.botao-propostas:hover {
+  background-color: #2e7d32; /* Verde mais escuro */
+  transform: scale(1.1); /* Aumenta 10% */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.botao-Integrantes {
+  display: inline-block;
+  background-color: var(--verde);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  transform: scale(1); /* Tamanho original */
+}
+
+.botao-Integrantes:hover {
+  background-color: #2e7d32; /* Verde mais escuro */
+  transform: scale(1.1); /* Aumenta 10% */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.botao-eventos {
+  display: inline-block;
+  background-color: var(--verde);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  transform: scale(1); /* Tamanho original */
+}
+
+.botao-eventos:hover {
+  background-color: #2e7d32; /* Verde mais escuro */
+  transform: scale(1.1); /* Aumenta 10% */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.botao-sugestoes {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-sugestoes:hover {
+  background-color: #45a049;
+}

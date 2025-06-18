@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Propostas - Grêmio Estudantil</title>
+
+  <!-- Fonte moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Paleta */
+    :root {
+      --vermelho: #d32f2f;
+      --verde: #388e3c;
+      --verde-claro: #e6f4ea;
+      --branco: #ffffff;
+      --cinza: #eeeeee;
+    }
+
+    /* Cabeçalho */
+    header {
+      background: var(--vermelho);
+      color: var(--branco);
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    /* Container principal */
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: var(--verde-claro);
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Título da seção */
+    h2 {
+      color: var(--verde);
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    /* Cartões de proposta interativos */
+    .proposta {
+      margin-bottom: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+    }
+
+    .proposta-btn {
+      width: 100%;
+      background-color: var(--branco);
+      border: none;
+      border-radius: 10px;
+      padding: 15px 20px;
+      font-size: 1.1em;
+      text-align: left;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .proposta-btn:hover {
+      background-color: #f0f0f0;
+    }
+
+    .proposta-detalhes {
+      max-height: 0;
+      overflow: hidden;
+      background-color: #ffffff;
+      border-radius: 0 0 10px 10px;
+      padding: 0 20px;
+      box-shadow: inset 0 -1px 0 #ccc;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .proposta-detalhes p {
+      margin: 15px 0;
+      color: #444;
+    }
+
+    .proposta.ativa .proposta-detalhes {
+      max-height: 200px;
+      padding: 15px 20px;
+    }
+
+    /* Rodapé */
+    footer {
+      background: var(--verde);
+      color: var(--branco);
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Propostas do Grêmio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Voltar ao Início</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Nossas Propostas</h2>
+
+      <div class="proposta">
+        <button class="proposta-btn">🏆 Organizar torneios esportivos mensais</button>
+        <div class="proposta-detalhes">
+          <p>Realizar campeonatos entre turmas com futebol, vôlei e outros esportes para incentivar a integração e o espírito de equipe.</p>
+        </div>
+      </div>
+
+      <div class="proposta">
+        <button class="proposta-btn">🤝 Campanhas para causas sociais</button>
+        <div class="proposta-detalhes">
+          <p>Promover ações de arrecadação de alimentos, roupas e brinquedos para ajudar comunidades em situação de vulnerabilidade.</p>
+        </div>
+      </div>
+
+      <div class="proposta">
+        <button class="proposta-btn">🎭 Reabertura de espaços na escola</button>
+        <div class="proposta-detalhes">
+          <p>Trabalhar em conjunto com a direção para reativar espaços da escola como a sala de informática e a biblioteca.</p>
+        </div>
+      </div>
+
+      <div class="proposta">
+        <button class="proposta-btn">📰 Criar um jornal escolar digital</button>
+        <div class="proposta-detalhes">
+          <p>Desenvolver um jornal online feito pelos estudantes com notícias, entrevistas, dicas e informações da escola.</p>
+        </div>
+      </div>
+
+      <div class="proposta">
+        <button class="proposta-btn">🗣️ Representar os estudantes em reuniões</button>
+        <div class="proposta-detalhes">
+          <p>Participar de reuniões escolares para garantir que as opiniões e necessidades dos alunos sejam ouvidas e consideradas.</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Grêmio Estudantil</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.proposta-btn').forEach(botao => {
+      botao.addEventListener('click', () => {
+        const proposta = botao.parentElement;
+        proposta.classList.toggle('ativa');
+      });
+    });
+  </script>
+
+</body>
+</html>
